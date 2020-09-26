@@ -1,0 +1,13 @@
+@import '~normalize.css';
+
+@import '~@game/style/game';
+
+html {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
