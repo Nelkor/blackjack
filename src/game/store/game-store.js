@@ -66,7 +66,8 @@ export default {
         await wait()
 
         ctx.commit('giveToDealer')
-        ctx.dispatch('finish')
+
+        changeStage('finish')
 
         return
       }

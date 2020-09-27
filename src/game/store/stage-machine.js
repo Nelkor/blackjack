@@ -1,12 +1,10 @@
 import store from '@/store'
 
-// TODO Состояния описаны в README.md
-
 const transitions = {
   readyToStart: ['init'],
   init: ['finish', 'waitForPlayer'],
   waitForPlayer: ['finish', 'defeat', 'waitForPlayer'],
-  finish: ['blackjack', 'victory', 'defeat', 'draw'],
+  finish: ['blackjack', 'victory', 'defeat', 'draw', 'finish'],
   blackjack: ['init'],
   victory: ['init'],
   defeat: ['init'],
