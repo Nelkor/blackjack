@@ -1,22 +1,25 @@
 <template>
   <div class="game-view">
     <GameCanvas/>
+    <GameHands/>
+    <PlayerDecision/>
     <GameCover/>
-    <GameUI/>
   </div>
 </template>
 
 <script>
+import PlayerDecision from '@game/components/PlayerDecision'
 import GameCanvas from '@game/components/GameCanvas'
 import GameCover from '@game/components/GameCover'
-import GameUI from '@game/components/GameUI'
+import GameHands from '@game/components/GameHands'
 
 export default {
   name: 'GameView',
   components: {
+    PlayerDecision,
     GameCanvas,
     GameCover,
-    GameUI,
+    GameHands,
   },
 }
 </script>

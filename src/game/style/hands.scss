@@ -1,0 +1,38 @@
+.game-hands {
+  .wrapper {
+    width: 280px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hand {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    font-size: 18px;
+
+    span {
+      color: wheat;
+      font-weight: bold;
+    }
+  }
+
+  .hand-value {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: green;
+    border: solid 2px #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,54 @@
+.player-decision {
+  z-index: 30;
+
+  .wrapper {
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(
+      transparent,
+      rgba(0, 0, 0, .4) 15%,
+      rgba(0, 0, 0, .4) 85%,
+      transparent
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    margin: 0 0 12px;
+    color: white;
+    font-size: 36px;
+  }
+
+  .controls {
+    display: flex;
+  }
+
+  .btn {
+    border: none;
+    background: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .btn-hit {
+    background-image: url(~@game/assets/plus.svg);
+    color: #00ee00;
+  }
+
+  .btn-stand {
+    background-image: url(~@game/assets/stop.svg);
+    color: white;
+  }
+}

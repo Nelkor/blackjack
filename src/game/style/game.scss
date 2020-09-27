@@ -1,5 +1,32 @@
 @import 'cover';
+@import 'player-decision';
+@import 'hands';
 
 .game-view {
   position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(~@game/assets/table.jpg);
+}
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hiding {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s;
+
+  &.shown {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
