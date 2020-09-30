@@ -1,9 +1,9 @@
-import { wait, check, finishStage, isBlackjack } from '@game/store/methods'
-import { FIRST_DELAY, LIMIT_OF_DEALER } from '@game/helpers/constants'
-import { createStandard52Deck } from '@game/helpers/deck'
-import { changeStage } from '@game/store/stage-machine'
-import { shuffle } from '@game/helpers/shuffler'
-import { sum } from '@game/helpers/adder'
+import { wait, check, finishStage, isBlackjack } from './methods'
+import { FIRST_DELAY, LIMIT_OF_DEALER } from '../helpers/constants'
+import { createStandard52Deck } from '../helpers/deck'
+import { changeStage } from './stage-machine'
+import { shuffle } from '../helpers/shuffler'
+import { sum } from '../helpers/adder'
 
 export default {
   namespaced: true,

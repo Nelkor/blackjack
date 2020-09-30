@@ -27,7 +27,7 @@ const getters = [
 export default {
   name: 'GameHands',
   computed: {
-    ...mapGetters('game', getters),
+    ...mapGetters('engine', getters),
   },
 }
 </script>

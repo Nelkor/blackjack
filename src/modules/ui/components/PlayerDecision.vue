@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import { check } from '@game/store/methods'
-import { changeStage } from '@game/store/stage-machine'
+import { check } from '@engine/store/methods'
+import { changeStage } from '@engine/store/stage-machine'
 
 export default {
   name: 'PlayerDecision',
   computed: {
     interactive() {
-      return this.$store.state.game.stage == 'waitForPlayer'
+      return this.$store.state.engine.stage == 'waitForPlayer'
     },
   },
   methods: {
@@ -35,7 +35,7 @@ export default {
         return
       }
 
-      this.$store.commit('game/giveToPlayer')
+      this.$store.commit('engine/giveToPlayer')
 
       check()
     },

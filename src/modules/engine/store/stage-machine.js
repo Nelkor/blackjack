@@ -12,27 +12,27 @@ const transitions = {
 }
 
 export const changeStage = nextStage => {
-  const stage = store.state.game.stage
+  const stage = store.state.engine.stage
   const availableTransitions = transitions[stage]
 
   if (!availableTransitions.includes(nextStage)) {
     throw new Error(`Prohibited stage change: ${nextStage} from ${stage}`)
   }
 
-  store.commit('game/changeStage', nextStage)
+  store.commit('engine/changeStage', nextStage)
 
   switch (nextStage) {
   case 'init':
-    store.dispatch('game/start')
+    store.dispatch('engine/start')
     break
   case 'finish':
-    store.dispatch('game/finish')
+    store.dispatch('engine/finish')
     break
   case 'blackjack':
   case 'victory':
   case 'defeat':
   case 'draw':
-    store.commit('game/saveToHistory')
+    store.commit('engine/saveToHistory')
     break
   }
 }

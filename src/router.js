@@ -1,14 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import game from '@game/routes/game-routes'
-
 Vue.use(VueRouter)
 
 const routes = [
-  ...game,
-
-  // unrecognized path
+  {
+    path: '/',
+  },
   {
     path: '*',
     redirect: '/',

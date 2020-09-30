@@ -1,5 +1,5 @@
-import { createCard } from '@game/helpers/card'
-import { sum } from '@game/helpers/adder'
+import { createCard } from '@engine/helpers/card'
+import { sum } from '@engine/helpers/adder'
 
 describe('sum', () => {
   test('sum should be defined', () => {

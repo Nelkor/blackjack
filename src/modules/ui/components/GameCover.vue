@@ -8,13 +8,13 @@
 </template>
 
 <script>
-import { changeStage } from '@game/store/stage-machine'
+import { changeStage } from '@engine/store/stage-machine'
 
-import CoverStart from '@game/components/CoverStart'
-import CoverBlackjack from '@game/components/CoverBlackjack'
-import CoverVictory from '@game/components/CoverVictory'
-import CoverDefeat from '@game/components/CoverDefeat'
-import CoverDraw from '@game/components/CoverDraw'
+import CoverStart from './CoverStart'
+import CoverBlackjack from './CoverBlackjack'
+import CoverVictory from './CoverVictory'
+import CoverDefeat from './CoverDefeat'
+import CoverDraw from './CoverDraw'
 
 export default {
   name: 'GameCover',
@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     stage() {
-      return this.$store.state.game.stage
+      return this.$store.state.engine.stage
     },
     cover() {
       return {

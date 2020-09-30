@@ -1,12 +1,12 @@
-import { PURPOSE, STANDARD_DELAY } from '@game/helpers/constants'
-import { changeStage } from '@game/store/stage-machine'
+import { PURPOSE, STANDARD_DELAY } from '../helpers/constants'
+import { changeStage } from './stage-machine'
 import store from '@/store'
 
 export const wait = (delay = STANDARD_DELAY) =>
   new Promise(resolve => setTimeout(resolve, delay))
 
 export const check = () => {
-  const value = store.getters['game/valueOfPlayersHand']
+  const value = store.getters['engine/valueOfPlayersHand']
 
   const stage = value > PURPOSE
     ? 'defeat'
@@ -17,13 +17,13 @@ export const check = () => {
 
 export const isBlackjack = () => {
   const handOfPlayer = {
-    count: store.state.game.handOfPlayer.length,
-    value: store.getters['game/valueOfPlayersHand'],
+    count: store.state.engine.handOfPlayer.length,
+    value: store.getters['engine/valueOfPlayersHand'],
   }
 
   const handOfDealer = {
-    count: store.state.game.handOfDealer.length,
-    value: store.getters['game/valueOfDealersHand'],
+    count: store.state.engine.handOfDealer.length,
+    value: store.getters['engine/valueOfDealersHand'],
   }
 
   // Ниже много магических чисел. :(
@@ -45,8 +45,8 @@ export const isBlackjack = () => {
 // Вариант, когда у игрока перебор, не относится к finish,
 // а является досрочным поражением с этапа waitForPlayer
 export const finishStage = () => {
-  const valueOfPlayer = store.getters['game/valueOfPlayersHand']
-  const valueOfDealer = store.getters['game/valueOfDealersHand']
+  const valueOfPlayer = store.getters['engine/valueOfPlayersHand']
+  const valueOfDealer = store.getters['engine/valueOfDealersHand']
 
   return valueOfDealer > PURPOSE || valueOfPlayer > valueOfDealer
     ? 'victory'

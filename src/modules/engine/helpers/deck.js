@@ -1,5 +1,5 @@
-import { SUITS } from '@game/helpers/constants'
-import { createCard } from '@game/helpers/card'
+import { SUITS } from './constants'
+import { createCard } from './card'
 
 const fullSetLength = 13
 

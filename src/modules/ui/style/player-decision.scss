@@ -38,12 +38,12 @@
   }
 
   .btn-hit {
-    background-image: url(~@game/assets/plus.svg);
+    background-image: url(~@/modules/ui/assets/plus.svg);
     color: #00ee00;
   }
 
   .btn-stand {
-    background-image: url(~@game/assets/stop.svg);
+    background-image: url(~@/modules/ui/assets/stop.svg);
     color: white;
   }
 }

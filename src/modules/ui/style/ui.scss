@@ -2,14 +2,6 @@
 @import 'player-decision';
 @import 'hands';
 
-.game-view {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-image: url(~@game/assets/table.jpg);
-  background-size: cover;
-}
-
 .overlay {
   position: absolute;
   width: 100vw;

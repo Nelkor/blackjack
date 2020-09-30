@@ -1,4 +1,4 @@
-import { SUITS } from '@game/helpers/constants'
+import { SUITS } from './constants'
 
 export const validateCard = (value, suit) => {
   if (value < 1 || value > 13) {

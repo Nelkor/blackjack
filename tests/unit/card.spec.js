@@ -1,4 +1,4 @@
-import { createCard } from '@game/helpers/card'
+import { createCard } from '@engine/helpers/card'
 
 describe('card', () => {
   test('createCard should be defined', () => {
