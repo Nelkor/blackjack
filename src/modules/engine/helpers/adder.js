@@ -1,9 +1,9 @@
-const addCard = (acc, { value }) => {
-  const addition = value == 1
-    ? (acc > 10 ? 1 : 11)
-    : Math.min(value, 10)
+export const sum = cards => {
+  const notAces = cards.filter(card => card.value != 1)
+  const acesCount = cards.length - notAces.length
+  const values = notAces.map(card => Math.min(10, card.value))
+  const sumOfNotAces = values.reduce((acc, cur) => acc + cur, 0)
+  const result = sumOfNotAces + acesCount
 
-  return acc + addition
+  return acesCount && result < 12 ? result + 10 : result
 }
-
-export const sum = cards => cards.reduce(addCard, 0)

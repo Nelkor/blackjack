@@ -6,13 +6,25 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import { init } from '../helpers/canvas'
+import { onHandOfPlayerChanged, onHandOfDealerChanged } from '../helpers/state'
+
 export default {
   name: 'GameCanvas',
+  computed: {
+    ...mapState('engine', ['handOfDealer', 'handOfPlayer']),
+  },
+  watch: {
+    handOfDealer(cards) {
+      onHandOfDealerChanged(cards)
+    },
+    handOfPlayer(cards) {
+      onHandOfPlayerChanged(cards)
+    },
+  },
   mounted() {
-    // const canvas = this.$refs.canvas
-    // const ctx = canvas.getContext('2d')
-
-    // Здесь можно инициализировать 2d-модуль
+    init(this.$refs.canvas)
   },
 }
 </script>

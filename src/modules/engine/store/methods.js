@@ -1,6 +1,6 @@
-import { PURPOSE, STANDARD_DELAY } from '../helpers/constants'
-import { changeStage } from './stage-machine'
+import { PURPOSE, STANDARD_DELAY } from '@/constants'
 import store from '@/store'
+import { changeStage } from './stage-machine'
 
 export const wait = (delay = STANDARD_DELAY) =>
   new Promise(resolve => setTimeout(resolve, delay))

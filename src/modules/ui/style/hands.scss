@@ -1,11 +1,14 @@
 .game-hands {
   .wrapper {
     width: 280px;
-    height: 400px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5vh 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    opacity: .8;
   }
 
   .hand {
@@ -17,7 +20,7 @@
     font-size: 18px;
 
     span {
-      color: wheat;
+      color: orange;
       font-weight: bold;
     }
   }

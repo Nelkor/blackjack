@@ -1,5 +1,5 @@
+import { FIRST_DELAY, LIMIT_OF_DEALER } from '@/constants'
 import { wait, check, finishStage, isBlackjack } from './methods'
-import { FIRST_DELAY, LIMIT_OF_DEALER } from '../helpers/constants'
 import { createStandard52Deck } from '../helpers/deck'
 import { changeStage } from './stage-machine'
 import { shuffle } from '../helpers/shuffler'

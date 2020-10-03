@@ -1,4 +1,4 @@
-import { SUITS } from './constants'
+import { SUITS } from '@/constants'
 import { createCard } from './card'
 
 const fullSetLength = 13

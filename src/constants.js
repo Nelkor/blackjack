@@ -5,6 +5,13 @@ export const SUITS = {
   SPADES: 4,
 }
 
+export const RELATIONS = {
+  SHOE: 1,
+  DEALER: 2,
+  PLAYER: 3,
+  REST: 4,
+}
+
 export const PURPOSE = 21
 export const LIMIT_OF_DEALER = 17
 export const FIRST_DELAY = 500
