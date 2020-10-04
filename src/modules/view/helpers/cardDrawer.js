@@ -1,19 +1,13 @@
 import { SUITS } from '@/constants'
 import { state } from './state'
+import { suitImage } from './suits'
 
 const suitContent = suit => {
   const color = suit == SUITS.DIAMONDS || suit == SUITS.HEARTS
     ? '#c4302b'
     : '#333'
 
-  const symbol = {
-    [SUITS.HEARTS]: '♥',
-    [SUITS.DIAMONDS]: '♦',
-    [SUITS.SPADES]: '♠',
-    [SUITS.CLUBS]: '♣',
-  }[suit]
-
-  return { color, symbol }
+  return { color, image: suitImage(suit) }
 }
 
 const formatValue = value => [
@@ -44,23 +38,17 @@ const frame = (ctx, x, y, width, height, padding) => {
 }
 
 const fill = (ctx, x, y, width, height, padding, center, suit, value) => {
-  const valueMultiplier = value == 10 ? .3 : .4
-  const { color, symbol } = suitContent(suit)
+  const { color, image } = suitContent(suit)
 
   ctx.fillStyle = color
-  ctx.textBaseline = 'top'
-  ctx.textAlign = 'left'
-  ctx.font = width * valueMultiplier + 'px "arial black"'
-  ctx.fillText(value, x + padding, y + padding)
+  ctx.font = `800 ${width * (value == 10 ? .3 : .4)}px sans-serif`
+  ctx.fillText(value, x + padding, y + padding * (value == 10 ? 3.4 : 4))
 
-  ctx.textAlign = 'right'
-  ctx.font = width * .5 + 'px "arial black"'
-  ctx.fillText(symbol, x + width - padding, y + padding * .3)
+  const side = padding * 3
+  ctx.drawImage(image, x + width - padding * 4, y + padding, side, side)
 
-  ctx.textBaseline = 'bottom'
-  ctx.textAlign = 'center'
-  ctx.font = width * 1.2 + 'px "arial black"'
-  ctx.fillText(symbol, x + center, y + height * 1.1)
+  const bigSide = width - padding * 2
+  ctx.drawImage(image, x + padding, y + padding * 4.8, bigSide, bigSide)
 }
 
 const flare = (ctx, x, y, width, padding) => {

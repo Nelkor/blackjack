@@ -40,7 +40,7 @@ export default {
       const restLength = ctx.state.rest.length
       const shoeLength = ctx.state.shoe.length
 
-      if (restLength > shoeLength) {
+      if (restLength / 3 > shoeLength) {
         ctx.commit('reloadShoe')
       }
 
