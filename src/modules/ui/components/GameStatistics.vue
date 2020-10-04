@@ -15,17 +15,15 @@ export default {
     history() {
       return this.$store.state.engine.history
     },
-    wins() {
-      return this.countOf('victory')
-    },
     blackjacks() {
       return this.countOf('blackjack')
     },
+    wins() {
+      return this.countOf('victory') + this.blackjacks
+    },
     winRate() {
-      const allWins = this.wins + this.blackjacks
-
       return this.history.length
-        ? Math.round(allWins / this.history.length * 100)
+        ? Math.round(this.wins / this.history.length * 100)
         : 0
     },
     draws() {
