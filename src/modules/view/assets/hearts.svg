@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 510.604 510.604" style="enable-background:new 0 0 510.604 510.604;" xml:space="preserve">
+<svg
+	width="100"
+	height="100"
+	version="1.1"
+	id="Layer_1"
+	xmlns="http://www.w3.org/2000/svg"
+	x="0px"
+	y="0px"
+	viewBox="0 0 510.604 510.604"
+	style="enable-background:new 0 0 510.604 510.604;"
+	xml:space="preserve"
+>
 <g>
 	<g>
 		<path d="M476.033,70.043c-34.287-36.71-71.791-55.322-111.479-55.322c-45.047,0-85.666,27.46-109.457,72.832
