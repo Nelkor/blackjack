@@ -30,6 +30,7 @@ module.exports = {
       { blankLine: 'any', prev: ['let', 'const'], next: ['let', 'const'] },
     ],
 
+    'vue/html-indent': ['error', 2],
     'vue/max-attributes-per-line': ['error', {
       singleline: 1,
       multiline: {
@@ -46,7 +47,6 @@ module.exports = {
       endTag: 'never',
       selfClosingTag: 'never',
     }],
-    'vue/html-indent': ['error', 2, {}],
   },
   overrides: [
     {
