@@ -45,9 +45,9 @@ const fill = (ctx, x, y, width, height, padding, center, suit, value) => {
   ctx.fillText(value, x + padding, y + padding * (value == 10 ? 3.4 : 4))
 
   const side = padding * 3
-  ctx.drawImage(image, x + width - padding * 4, y + padding, side, side)
-
   const bigSide = width - padding * 2
+
+  ctx.drawImage(image, x + width - padding * 4, y + padding, side, side)
   ctx.drawImage(image, x + padding, y + padding * 4.8, bigSide, bigSide)
 }
 
